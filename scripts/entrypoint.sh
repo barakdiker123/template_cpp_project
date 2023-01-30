@@ -19,7 +19,7 @@ BUILD_DIR="${BASE_DIR}/build"
 SOURCE_DIRS="app lib test"
 
 # The following can be LLVM, GNU, Google, Chromium, Microsoft, Mozilla or WebKit.
-FORMAT_STYLE="WebKit"
+FORMAT_STYLE="Google"
 
 ########################################
 function info
@@ -67,6 +67,16 @@ function app-test
     )
 }
 
+function app-run
+{
+    (
+        cd "${BUILD_DIR}"
+
+        make -j
+
+        ./app/bin/4c-project-structure_run
+    )
+}
 function app-format
 {
     local cc_files=$(find $SOURCE_DIRS -name '*.cc' 2>/dev/null)
@@ -94,6 +104,7 @@ do
         clean   | \
         format  | \
         shell   | \
+        run     | \
         test    )
             command=$1
             shift
