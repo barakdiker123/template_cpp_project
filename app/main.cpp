@@ -4,13 +4,13 @@
 #include "timer_asio.h"
 
 int main() {
-  std::cout << "Hello, World!" << std::endl;
-  // tutorial1();
+  // std::cout << "Hello, World!" << std::endl;
+  tutorial2();
 
   // usage of timer_asio.h
-  boost::asio::io_context io;
-  printer p(io);
-  io.run();
+  // boost::asio::io_context io;
+  // printer p(io);
+  // io.run();
 
   return 0;
 }

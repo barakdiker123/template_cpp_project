@@ -17,7 +17,9 @@ auto tutorial2() -> int {
   boost::asio::io_context io;
   boost::asio::steady_timer t(io, boost::asio::chrono::seconds(5));
   t.async_wait(&print);
-  io.run();
   std::cout << "Hello Barak" << std::endl;
+  sleep(10);
+  io.run();
+  std::cout << "finished!!!" << std::endl;
   return 0;
 }

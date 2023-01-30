@@ -3,7 +3,7 @@
 #include <iostream>
 
 class printer {
-public:
+ public:
   printer(boost::asio::io_context &io)
       : timer_(io, boost::asio::chrono::seconds(1)), count_(0) {
     timer_.async_wait(boost::bind(&printer::print, this));
@@ -21,7 +21,7 @@ public:
     }
   }
 
-private:
+ private:
   boost::asio::steady_timer timer_;
   int count_;
 };
