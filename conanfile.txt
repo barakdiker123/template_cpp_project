@@ -1,5 +1,6 @@
 [requires]
 catch2/2.13.6
+boost/1.81.0
 
 [options]
 
