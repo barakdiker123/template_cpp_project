@@ -36,6 +36,11 @@ dckr-test:	## Run application tests, within a Docker container
 test:		## Run application tests
 	./scripts/entrypoint.sh test
 
+
+.PHONY: run
+run:		## Run application tests
+	./scripts/entrypoint.sh run
+
 #######################################
 # Utils targets
 #######################################

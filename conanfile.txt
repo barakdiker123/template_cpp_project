@@ -1,6 +1,9 @@
 [requires]
 catch2/2.13.6
 boost/1.81.0
+sfml/2.5.1
+imgui/cci.20220621+1.88.docking
+ceres-solver/2.1.0
 
 [options]
 
